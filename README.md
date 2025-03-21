@@ -1,18 +1,15 @@
-<svg width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Image (scaled) -->
-  <image href="https://files.catbox.moe/5i2kcn.png" x="50%" y="10" width="300" height="400" transform="translate(-150, 0)" />
-  
-  <!-- Main Text -->
-  <text x="50%" y="330" text-anchor="middle" font-family="EB Garamond" font-size="3em" fill="#ffcc00" dy=".3em">
-    queen-ruva ai
-  </text>
-</svg>
+<p align="center">
+  <img src="https://files.catbox.moe/5i2kcn.png" alt="Queen Ruva AI" width="300" height="400" />
+</p>
+
+<h1 align="center" style="font-family: 'EB Garamond', serif; font-size: 3em; color: #ffcc00;">queen-ruva ai</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=900&size=30&duration=4000&pause=1000&width=435&lines=My+Name+is+Iconic+Tech;Created+Queen+Ruva+AI;Fork+Me+and+Enjoy!" alt="Typing SVG" />
 </p>
 
 ---
+
 ## 🕒 Last Bot Update:  
 ![Last Update](https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&label=Updated%20on)
 
@@ -62,7 +59,6 @@
 
 ---
 
----
 ### 🎖 **<span style="color: #DC143C;">founder</span>**  
 👑 **Iconic Tech** – Developer & Maintainer of Queen Ruva AI Beta  
 
