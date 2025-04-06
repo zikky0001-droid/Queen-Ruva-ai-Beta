@@ -1,5 +1,15 @@
 const fs = require('fs')
 const chalk = require('chalk')
+/* ========== REACTION SYSTEM SETTINGS ========== */
+global.reactSettings = {
+  enabled: true, // Master switch
+  emojis: ['🔍', '🔥', '👍', '😂', '😮'], // Reaction pool
+  cooldown: new Map(), // Stores last reaction time per chat
+  noReactZones: [ // Groups/channels where reactions are blocked
+    '120363301955930948@g.us' // QUEEN RUVA AI BETA group
+  ]
+};
+
 
 //contact details
 global.ownernomer = "263786115435"
