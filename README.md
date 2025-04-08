@@ -15,6 +15,16 @@
 
 ---
 
+## 📥 **Download Options**
+
+### Option 1: Download from MediaFire (Direct)
+[![⬇️ MediaFire Download](https://img.shields.io/badge/⬇️%20MediaFire%20Download-004E89?style=for-the-badge&logo=mediafire)](https://www.mediafire.com/file/25q29nxq3nyuom0/QUEEN_RUVA_AI_updat_%25F0%259F%2594%258D%25E2%259C%2585.zip/file)
+
+### Option 2: Download from GitHub Repository
+[![⬇️ GitHub Download](https://img.shields.io/badge/⬇️%20GitHub%20Download-181717?style=for-the-badge&logo=github)](https://github.com/iconic05/Queen-ruva-ai-beta/archive/refs/heads/main.zip)
+
+---
+
 ## 👋 **Welcome, User!**  
 💬 **Hello there!** Thanks for visiting **Queen Ruva AI Beta**. Feel free to explore, fork, and deploy! 🚀  
 
@@ -52,10 +62,6 @@
 
 [![Fork me on GitHub](https://img.shields.io/badge/Fork%20Me%20on%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/iconic05/Queen-ruva-ai-beta/fork)
 [![Star me on GitHub](https://img.shields.io/github/stars/iconic05/Queen-ruva-ai-beta?style=for-the-badge&logo=github)](https://github.com/iconic05/Queen-ruva-ai-beta/stargazers)
----
-
-## 📥 **<span style="color: #FFD700;">Download the Latest Version of the Bot</span>**  
-[![⬇️ Download File](https://img.shields.io/badge/⬇️%20Download%20File-green?style=for-the-badge)](https://www.mediafire.com/file/25q29nxq3nyuom0/QUEEN_RUVA_AI_updat_%25F0%259F%2594%258D%25E2%259C%2585.zip/file)
 
 ---
 
