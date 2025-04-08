@@ -43,8 +43,9 @@
 3. Deploy free watch YouTube tutorial 
 4. Deploy the service, and Katapumb will handle the rest!
 
-### Watch the tutorial:
+### Watch the tutorials:
 [![Watch on YouTube](https://img.shields.io/badge/▶️%20Watch%20Guide-red?style=for-the-badge)](https://youtu.be/Pzl43dlPkQw?si=t3zMgaUNkH-UIg8y)
+[![New Tutorial](https://img.shields.io/badge/▶️%20New%20Tutorial-blue?style=for-the-badge)](https://youtu.be/EjSYTriMcfw?si=okahnRwxX4nz5SAP)
 
 ## 📌 **Fork and Star the Project**
 🚀 **Fork** this project to make your own custom version!  
@@ -54,8 +55,9 @@
 [![Star me on GitHub](https://img.shields.io/github/stars/iconic05/Queen-ruva-ai-beta?style=for-the-badge&logo=github)](https://github.com/iconic05/Queen-ruva-ai-beta/stargazers)
 ---
 
-## 📥 **<span style="color: #FFD700;">Download the Latest Version of the Bot</span>**  
-[![⬇️ Download File](https://img.shields.io/badge/⬇️%20Download%20File-green?style=for-the-badge)](https://github.com/iconic05/Queen-ruva-ai-beta/archive/refs/heads/main.zip)
+## 📥 **<span style="color: #FFD700;">Download Options</span>**  
+[![⬇️ GitHub Download](https://img.shields.io/badge/⬇️%20GitHub%20Download-green?style=for-the-badge)](https://github.com/iconic05/Queen-ruva-ai-beta/archive/refs/heads/main.zip)
+[![⬇️ MediaFire Download](https://img.shields.io/badge/⬇️%20MediaFire%20Download-orange?style=for-the-badge)](https://www.mediafire.com/file/25q29nxq3nyuom0/QUEEN_RUVA_AI_updat_%25F0%259F%2594%258D%25E2%259C%2585.zip/file)
 
 ---
 
@@ -88,12 +90,3 @@ If you encounter any issues, feel free to reach out to the owner for support.
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=900&size=20&pause=1000&color=FF0000&vCenter=true&width=200&lines=Made+with+❤️;By+ICONICS-TECH" alt="Made with love SVG" />
 </p>
-
-add this  this can dawnload direct 
-https://www.mediafire.com/file/25q29nxq3nyuom0/QUEEN_RUVA_AI_updat_%25F0%259F%2594%258D%25E2%259C%2585.zip/file
-
-add channel
-https://whatsapp.com/channel/0029ValX2Js9RZAVtDgMYj0r
-
-add new video tip
-https://youtu.be/EjSYTriMcfw?si=okahnRwxX4nz5SAP
