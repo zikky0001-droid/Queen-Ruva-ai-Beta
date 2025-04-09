@@ -1,4 +1,4 @@
-FROM node:lts-buster
+FROM node:20-buster  # Changed from lts-buster to specific version for stability
 
 # Install dependencies
 RUN apt-get update && \
@@ -13,16 +13,18 @@ RUN apt-get update && \
 WORKDIR /app
 RUN mkdir -p /app/session && chown node:node /app/session
 
-# Install dependencies (remove --production if needed)
+# Install dependencies
 COPY package*.json ./
 RUN npm install && npm install qrcode-terminal
 
-# Copy app files (use .dockerignore to exclude session/)
+# Copy app files
 COPY . .
 
 # Ensure correct permissions
 RUN chown -R node:node /app
 
-EXPOSE 3000
+# Remove EXPOSE (not needed for Render)
 USER node
-CMD ["node", "index.js", "--server"]
+
+# Modified CMD for Render compatibility
+CMD ["node", "index.js"]  # Removed --server flag
