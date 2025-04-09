@@ -1,4 +1,4 @@
-FROM node:20-buster  # Changed from lts-buster to specific version for stability
+FROM node:20-buster
 
 # Install dependencies
 RUN apt-get update && \
@@ -23,8 +23,5 @@ COPY . .
 # Ensure correct permissions
 RUN chown -R node:node /app
 
-# Remove EXPOSE (not needed for Render)
 USER node
-
-# Modified CMD for Render compatibility
-CMD ["node", "index.js"]  # Removed --server flag
+CMD ["node", "index.js"]
