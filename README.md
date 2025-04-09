@@ -30,14 +30,24 @@
 
 ---
 
-## 🖥 **<span style="color: #32CD32;">Deploying on Panel</span>**  
+## 🖥 **<span style="color: #32CD32;">Deployment Options</span>**  
+
+### Deploy on Render
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+1. Click the "Deploy to Render" button above
+2. Connect your GitHub account
+3. Select the Queen Ruva AI repository
+4. Configure environment variables if needed
+5. Click "Deploy" and wait for deployment to complete
+
+### Deploying on Panel  
 1. Go to [Bot Hosting Panel](https://bot-hosting.net/?aff=1274828280750407803) and sign up.
 2. Sign up for a new account or log in to your existing account.
 3. Create a new **Web Service**.
 4. In the **Service Settings**, connect your GitHub repository where Queen Ruva AI Beta is stored.
 6. Deploy the service, and it will automatically start running.
 
-### Deploying on Katapumb
+### Deploying on Katapumb  
 1. Go to [Katapumb Dashboard](https://dashboard.katabump.com/auth/login#0d9140) and log in or sign up.
 2. Create a new **account** and connect your GitHub repository where Queen Ruva AI Beta is stored.
 3. Deploy free watch YouTube tutorial 
@@ -90,3 +100,7 @@ If you encounter any issues, feel free to reach out to the owner for support.
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=900&size=20&pause=1000&color=FF0000&vCenter=true&width=200&lines=Made+with+❤️;By+ICONICS-TECH" alt="Made with love SVG" />
 </p>
+
+## 🔑 **Session for Queen Ruva AI**
+Get your session ID here:  
+[https://queen-ruva-ai-3d-session-id.onrender.com/](https://queen-ruva-ai-3d-session-id.onrender.com/)
