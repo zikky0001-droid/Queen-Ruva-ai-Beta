@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
-# Create and set permissions for session directory
+# Create session dir with correct permissions
 RUN mkdir -p /app/session && \
     chown node:node /app/session
 
@@ -20,17 +20,15 @@ COPY package*.json ./
 RUN npm install --production && \
     npm install qrcode-terminal
 
-# Copy session file (if it exists in your project)
-COPY session/o\ reds.json ./session/
+# Copy ONLY the creds.json file
+COPY session/creds.json ./session/
 
-# Copy the rest of the app
+# Copy remaining files (except session/ to avoid overwrites)
 COPY . .
 
-# Ensure permissions
+# Final permission fix
 RUN chown -R node:node /app/session
 
 EXPOSE 3000
-
 USER node
-
 CMD ["node", "index.js", "--server"]
