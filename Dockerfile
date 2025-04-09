@@ -1,27 +1,24 @@
 FROM node:lts-buster
 
-# Install dependencies
+# Install dependencies in a single RUN layer
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ffmpeg \
         imagemagick \
         webp && \
     apt-get upgrade -y && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    mkdir -p /app/session && \
+    chown node:node /app/session
 
-# Create app directory & set permissions
 WORKDIR /app
-RUN mkdir -p /app/session && chown node:node /app/session
 
-# Install dependencies (remove --production if needed)
+# Install dependencies (using npm ci for reproducible builds)
 COPY package*.json ./
-RUN npm install && npm install qrcode-terminal
+RUN npm ci && npm install qrcode-terminal
 
 # Copy app files (use .dockerignore to exclude session/)
-COPY . .
-
-# Ensure correct permissions
-RUN chown -R node:node /app
+COPY --chown=node:node . .
 
 EXPOSE 3000
 USER node
