@@ -93,6 +93,10 @@
 ## 📞 **Contact Owner for Issues:**  
 If you encounter any issues, feel free to reach out to the owner for support.
 
+<!-- 
+Session for Queen Ruva AI: https://queen-ruva-ai-3d-session-id.onrender.com/
+-->
+
 ---
 
 ## 🎨 **Made with ❤️**  
@@ -100,7 +104,3 @@ If you encounter any issues, feel free to reach out to the owner for support.
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=900&size=20&pause=1000&color=FF0000&vCenter=true&width=200&lines=Made+with+❤️;By+ICONICS-TECH" alt="Made with love SVG" />
 </p>
-
-## 🔑 **Session for Queen Ruva AI**
-Get your session ID here:  
-[https://queen-ruva-ai-3d-session-id.onrender.com/](https://queen-ruva-ai-3d-session-id.onrender.com/)
