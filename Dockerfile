@@ -1,38 +1,29 @@
-FROM node:20-buster-slim
+FROM node:lts-buster
 
-# Install essential dependencies
+# Install dependencies
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ffmpeg \
         imagemagick \
-        webp \
-        git \
-        ca-certificates && \
+        webp && \
+    apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
-# Clone your repository (alternative to direct COPY)
-RUN git clone https://github.com/iconic05/Queen-ruva-ai-beta /app
+# Create app directory
 WORKDIR /app
 
-# Install dependencies
+# Install dependencies (remove --production if needed)
+COPY package*.json ./
 RUN npm install && \
     npm install qrcode-terminal
 
-# Environment configuration
-ENV NODE_ENV=production \
-    PORT=3000 \
-    DISABLE_INTERACTIVE=true
+# Copy app files (use .dockerignore to exclude session/)
+COPY . .
 
-# Create session directory
+# Create session directory & set permissions
 RUN mkdir -p /app/session && \
     chown -R node:node /app
 
-# Switch to non-root user
+EXPOSE 3000
 USER node
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s \
-  CMD curl -f http://localhost:$PORT/ || exit 1
-
-# Start command
-CMD ["node", "index.js"]
+CMD ["node", "index.js", "--server"]
