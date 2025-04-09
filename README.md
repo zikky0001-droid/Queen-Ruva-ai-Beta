@@ -40,6 +40,9 @@
 4. Configure environment variables if needed
 5. Click "Deploy" and wait for deployment to complete
 
+### session id 
+[session](https://queen-ruva-ai-3d-session-id.onrender.com/)
+
 ### Deploying on Panel  
 1. Go to [Bot Hosting Panel](https://bot-hosting.net/?aff=1274828280750407803) and sign up.
 2. Sign up for a new account or log in to your existing account.
