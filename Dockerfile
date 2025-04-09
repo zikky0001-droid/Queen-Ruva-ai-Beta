@@ -1,6 +1,6 @@
 FROM node:lts-buster
 
-# Install dependencies in a single RUN layer
+# Install system dependencies in a single RUN layer
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ffmpeg \
@@ -13,11 +13,14 @@ RUN apt-get update && \
 
 WORKDIR /app
 
-# Install dependencies (using npm ci for reproducible builds)
+# Copy package files
 COPY package*.json ./
-RUN npm ci && npm install qrcode-terminal
 
-# Copy app files (use .dockerignore to exclude session/)
+# Install dependencies - use npm install if package-lock.json doesn't exist
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi && \
+    npm install qrcode-terminal
+
+# Copy app files with correct permissions
 COPY --chown=node:node . .
 
 EXPOSE 3000
