@@ -1,29 +1,28 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18-alpine
+FROM node:lts-buster
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ffmpeg \
+        imagemagick \
+        webp && \
+    apt-get upgrade -y && \
+    rm -rf /var/lib/apt/lists/*
 
-# Install system dependencies (git, python3, make, g++, ffmpeg, imagemagick)
-RUN apk add --no-cache \
-    git \
-    python3 \
-    make \
-    g++ \
-    ffmpeg \
-    imagemagick
+# Create app directory & set permissions
+WORKDIR /app
+RUN mkdir -p /app/session && chown node:node /app/session
 
-# Copy package.json and package-lock.json first to leverage Docker cache
+# Install dependencies (remove --production if needed)
 COPY package*.json ./
+RUN npm install && npm install qrcode-terminal
 
-# Install Node.js dependencies
-RUN npm install
-
-# Copy the rest of the application code
+# Copy app files (use .dockerignore to exclude session/)
 COPY . .
 
-# Expose the port the app runs on
-EXPOSE 3000
+# Ensure correct permissions
+RUN chown -R node:node /app
 
-# Command to run the application
-CMD ["node", "index.js"]
+EXPOSE 3000
+USER node
+CMD ["node", "index.js", "--server"]
