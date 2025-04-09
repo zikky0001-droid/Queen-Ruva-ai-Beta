@@ -1,31 +1,29 @@
-FROM node:lts-buster-slim
+# Use an official Node.js runtime as a parent image
+FROM node:18-alpine
 
-# Install dependencies
-RUN apt-get update && \
-    apt-get install -y \
-    ffmpeg \
-    imagemagick \
-    webp \
-    git \
-    && apt-get upgrade -y \
-    && rm -rf /var/lib/apt/lists/*
-
-# Create app directory
+# Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Install app dependencies
+# Copy package.json and package-lock.json first to leverage Docker cache
 COPY package*.json ./
-RUN npm install --omit=dev && npm install -g qrcode-terminal pm2
 
-# Bundle app source
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
 COPY . .
 
-# Set environment variables
-ENV NODE_ENV=production
-ENV PORT=3000
+# Install required system dependencies
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    ffmpeg \
+    imagemagick \
+    && npm install
 
-# Expose the app port
+# Expose the port the app runs on
 EXPOSE 3000
 
-# Run the application
-CMD ["pm2-runtime", "start", "index.js"]
+# Command to run the application
+CMD ["node", "index.js"]
