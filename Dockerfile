@@ -29,11 +29,11 @@ RUN mkdir -p /app/session && \
 
 # Environment configuration
 ENV NODE_ENV=production \
-    DISABLE_READLINE=true \  # This prevents readline errors
+    DISABLE_READLINE=true \
     PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 # Run as non-root user
 USER node
 
-# Start command (no --server flag needed)
+# Start command
 CMD ["node", "index.js"]
