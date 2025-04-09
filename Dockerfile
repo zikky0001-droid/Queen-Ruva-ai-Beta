@@ -9,25 +9,19 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
-# Create session dir with correct permissions
-RUN mkdir -p /app/session && \
-    chown node:node /app/session
-
+# Create app directory & set permissions
 WORKDIR /app
+RUN mkdir -p /app/session && chown node:node /app/session
 
+# Install dependencies (remove --production if needed)
 COPY package*.json ./
+RUN npm install && npm install qrcode-terminal
 
-RUN npm install --production && \
-    npm install qrcode-terminal
-
-# Copy ONLY the creds.json file
-COPY session/creds.json ./session/
-
-# Copy remaining files (except session/ to avoid overwrites)
+# Copy app files (use .dockerignore to exclude session/)
 COPY . .
 
-# Final permission fix
-RUN chown -R node:node /app/session
+# Ensure correct permissions
+RUN chown -R node:node /app
 
 EXPOSE 3000
 USER node
