@@ -9,24 +9,28 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
-# Set working directory
+# Create and set permissions for session directory
+RUN mkdir -p /app/session && \
+    chown node:node /app/session
+
 WORKDIR /app
 
-# Copy package files first for better caching
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install --production && \
     npm install qrcode-terminal
 
-# Copy application files
+# Copy session file (if it exists in your project)
+COPY session/o\ reds.json ./session/
+
+# Copy the rest of the app
 COPY . .
 
-# Expose port
+# Ensure permissions
+RUN chown -R node:node /app/session
+
 EXPOSE 3000
 
-# Set the user to node for better security
 USER node
 
-# Command to run the application
 CMD ["node", "index.js", "--server"]
