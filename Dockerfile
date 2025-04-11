@@ -1,30 +1,33 @@
-# Use Node.js LTS version
-FROM node:18-alpine
+FROM node:lts
 
-# Create app directory
-WORKDIR /usr/src/app
+# Install dependencies and clean up
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    ffmpeg \
+    imagemagick \
+    webp && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Install system dependencies first (including Python for some npm packages)
-RUN apk add --no-cache \
-    build-base \
-    python3 \
-    make \
-    g++
+# Set working directory
+WORKDIR /app
 
-# Copy package files first for better caching
+# Copy package files
 COPY package*.json ./
+COPY .npmrc ./
 
-# Install npm dependencies
-RUN npm install --production
+# Install dependencies
+RUN npm ci --only=production
 
-# Bundle app source
+# Copy application code
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p ./session ./database ./welcome
-
-# Expose the port the app runs on
+# Expose port
 EXPOSE 3000
 
-# Run the bot
-CMD [ "node", "index.js" ]
+# Set environment
+ENV NODE_ENV=production
+ENV PORT=3000
+
+# Run command
+CMD ["node", "index.js"]
