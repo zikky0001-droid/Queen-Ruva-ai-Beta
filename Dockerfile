@@ -4,21 +4,21 @@ FROM node:18-alpine
 # Create app directory
 WORKDIR /usr/src/app
 
-# Install dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-COPY package*.json ./
-
-# Install required system dependencies
+# Install system dependencies first (including Python for some npm packages)
 RUN apk add --no-cache \
     build-base \
     python3 \
-    && npm install
+    make \
+    g++
+
+# Copy package files first for better caching
+COPY package*.json ./
+
+# Install npm dependencies
+RUN npm install --production
 
 # Bundle app source
 COPY . .
-
-# Install additional dependencies if needed
-RUN npm install pino @hapi/boom express chalk file-type path axios awesome-phonenumber node-cache libphonenumber-js @whiskeysockets/baileys
 
 # Create necessary directories
 RUN mkdir -p ./session ./database ./welcome
