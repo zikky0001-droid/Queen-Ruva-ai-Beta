@@ -1,39 +1,20 @@
-FROM node:lts
+FROM node:lts-buster
 
-# Install dependencies with proper cleanup
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ffmpeg \
-    imagemagick \
-    webp \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+RUN apt-get update && \
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
 
-# Set working directory
-WORKDIR /app
+COPY package.json .
 
-# Copy package files first for better caching
-COPY package*.json ./
+RUN npm install && npm install -g qrcode-terminal pm2
 
-# Install production dependencies only
-RUN npm install --production \
-    && npm cache clean --force
-
-# Copy application code
 COPY . .
 
-# Create session/database dirs with correct permissions
-RUN mkdir -p /app/session /app/database \
-    && chown -R node:node /app/session /app/database
+EXPOSE 3000
 
-# Run as non-root user for security
-USER node
 
-# Volume declarations (must match your code)
-VOLUME ["/app/session", "/app/database"]
-
-# Environment variables
-ENV NODE_ENV=production \
-    SESSION_PATH=/app/session
-
-# Directly run your start script (no auto-restart)
-CMD ["npm", "start"]
+CMD ["pm2-runtime", "start", "index.js"]
