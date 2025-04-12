@@ -1,7 +1,12 @@
 FROM node:lts
 
 # Install dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ffmpeg \
+    imagemagick \
+    webp \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
@@ -15,11 +20,18 @@ RUN npm install && npm cache clean --force
 # Copy application code
 COPY . .
 
+# Create a volume for session storage
+VOLUME /app/session
+
+# Create a volume for database storage
+VOLUME /app/database
+
 # Expose port
 EXPOSE 3000
 
 # Set environment
-ENV NODE_ENV production
+ENV NODE_ENV=production \
+    SESSION_PATH=/app/session
 
 # Run command
 CMD ["npm", "run", "start"]
