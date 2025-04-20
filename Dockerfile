@@ -1,23 +1,26 @@
-# Use an official Node runtime as the base image
-FROM node:18-alpine
+FROM node:lts
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
 
-# Copy package.json and package-lock.json first for better caching
+# Set working directory
+WORKDIR /app
+
+# Copy package files
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install && npm cache clean --force
+RUN npm install -g pm2
 
-# Copy the rest of the application code
+# Copy application code
 COPY . .
 
-# Build the application (if needed)
-RUN npm run build
+# Expose port
+EXPOSE 3000
 
-# Expose the port the app runs on
-EXPOSE ${PORT:-3000}
+# Set environment
+ENV NODE_ENV production
 
-# Define the command to run the app
-CMD ["npm", "start"]
+# Run command
+CMD ["npm", "run", "start"]
