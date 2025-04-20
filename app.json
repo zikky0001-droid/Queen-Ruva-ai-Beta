@@ -1,0 +1,84 @@
+{
+  "name": "Queen-ruva-ai-beta",
+  "version": "2.4.1",
+  "description": "MIDKBANX-XMD | Advanced WhatsApp Bot for Gweru",
+  "logo": "https://b.top4top.io/p_3291qwfqu0.jpg",
+  "keywords": ["whatsapp", "bot", "md", "ai", "automation"],
+  "repository": "https://github.com/iconic05/Queen-ruva-ai-beta.git",
+  "stack": "container",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "env": {
+    "BOT_NAME": {
+      "description": "Your bot's display name",
+      "value": "Queen Ruva AI ¦Â",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number with country code (e.g. 263XXXXXXXXX)",
+      "value": "",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "description": "Bot owner's name",
+      "value": "Iconic Developer",
+      "required": true
+    },
+    "STICKER_AUTHOR_NAME": {
+      "description": "Default sticker pack author",
+      "value": "Queen Ruva Stickers",
+      "required": false
+    },
+    "TIMEZONE": {
+      "description": "Server timezone (default: Africa/Harare)",
+      "value": "Africa/Harare",
+      "required": false
+    },
+    "PREFIX": {
+      "description": "Command prefix (default: !)",
+      "value": "!",
+      "required": false
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string for database",
+      "value": "",
+      "required": false
+    },
+    "SESSION_SECRET": {
+      "description": "Secret key for session encryption",
+      "value": "generate-a-strong-secret-here",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 0,
+      "size": "free"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+  "addons": [
+    {
+      "plan": "heroku-redis:hobby-dev"
+    }
+  ]
+}
