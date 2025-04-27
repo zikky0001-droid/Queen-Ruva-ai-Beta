@@ -46,7 +46,7 @@ global.mess = {
     botAdmin: "🤖 Please make me admin to use this feature",
     owner: "🚫 Owner-only command detected",
     group: "💬 This command works in groups only",
-    private: "📩 Please use this in private chat with me",
+    private: "📩 Please use this in private chat with me.",
     wait: "⏳ Processing your request...",
     error: "❌ Oops! Something went wrong",
 };
