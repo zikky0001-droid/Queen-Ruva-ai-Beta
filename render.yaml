@@ -1,13 +1,9 @@
 services:
   - type: web
-    name: queen-ruva ai beta
+    name: QUEEN-RUVA-AI-BETA
     env: node
-    plan: free  
-    region: singapore  
-    buildCommand: npm install
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
-    healthCheckPath: /  
-    autoDeploy: false  
+    region: singapore
+    buildCommand: "yarn install"
+    startCommand: "npm start"
+    plan: free
+    
