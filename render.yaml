@@ -3,7 +3,6 @@ services:
     name: QUEEN-RUVA-AI-BETA
     env: node
     region: singapore
-    buildCommand: "yarn install"
-    startCommand: "npm start"
+    buildCommand: "npm install"
+    startCommand: "node index.js"
     plan: free
-    
