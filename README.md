@@ -56,26 +56,38 @@
 3. Deploy free watch YouTube tutorial 
 4. Deploy the service, and Katapumb will handle the rest!
 
+## deploy using termux (android and os) free 
+_
 ### Install on Termux (Android)
 ```bash
-# Update Termux & install dependencies
+# System Update
+clear
+echo "[+] Updating packages..."
 pkg update -y && pkg upgrade -y
-pkg install -y git wget unzip nodejs
 
-# Download and extract the bot
-wget https://github.com/iconic05/Queen-Ruva-ai-Beta/archive/refs/heads/main.zip -O Queen-Ruva-ai-Beta.zip
-unzip Queen-Ruva-ai-Beta.zip
-cd Queen-Ruva-ai-Beta-main
+# Install Dependencies
+echo "[+] Installing dependencies..."
+pkg install -y git nodejs ffmpeg imagemagick libwebp
 
-# Install Node.js dependencies
+# Clone Repository
+echo "[+] Downloading Queen-ruva-ai-beta..."
+git clone https://github.com/iconic05/Queen-ruva-ai-beta.git
+cd Queen-ruva-ai-beta
+
+# Install Node Modules
+echo "[+] Installing node modules..."
 npm install
+npm install -g npm@latest
+npm audit fix --force
 
-# (Optional) If it uses yarn instead of npm:
-# pkg install -y yarn
-# yarn install
+# Fix Common Issues
+echo "[+] Applying fixes..."
+pkg install python -y
+npm install --global yarn
+yarn install
 
-# Edit config file (if needed)
-# nano config.json
-
-# Start the bot
-node index.js  # or "npm start" / "yarn start" depending on setup
+# Start Bot
+clear
+echo "[+] Installation complete!"
+echo "[+] Starting Queen-ruva-ai-beta..."
+node .
