@@ -91,3 +91,10 @@ clear
 echo "[+] Installation complete!"
 echo "[+] Starting Queen-ruva-ai-beta..."
 node .
+```
+## paste after restart termux 
+```bash
+cd Queen-ruva-ai-beta
+node .
+```
+##POWEED BY ICONIC TECH ♻️ 
