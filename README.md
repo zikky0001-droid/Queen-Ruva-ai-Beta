@@ -13,11 +13,7 @@
 ## 🕒 Last Bot Update:  
 ![Last Update](https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&label=Updated%20on)
 
----
-### 🔥 Popular Repositories  
-<a href="https://github.com/iconic05/Ossene-Rune-al-Beta">  
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=iconic05&repo=Ossene-Rune-al-Beta&show_icons=true&theme=radical" alt="Ossene-Rune-al-Beta">  
-</a>  
+---  
 ## 👋 **Welcome, User!**  
 💬 **Hello there!** Thanks for visiting **Queen Ruva AI Beta**. Feel free to explore, fork, and deploy! 🚀  
 
@@ -58,6 +54,34 @@
 2. Create a new **account** and connect your GitHub repository where Queen Ruva AI Beta is stored.
 3. Deploy free watch YouTube tutorial 
 4. Deploy the service, and Katapumb will handle the rest!
+5. <svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f0f8ff" rx="10" ry="10"/>
+  
+  <!-- Greeting Text -->
+  <text x="50%" y="40%" font-family="Arial" font-size="20" fill="#333" text-anchor="middle">
+    Hello! Let's connect on WhatsApp!
+  </text>
+  
+  <!-- Animated WhatsApp Icon (Clickable) -->
+  <a href="https://chat.whatsapp.com/JyFPHD/c5b4kQjMJFjy7Np" target="_blank">
+    <g transform="translate(180, 70)">
+      <!-- WhatsApp Icon Background -->
+      <circle cx="20" cy="20" r="20" fill="#25D366"/>
+      
+      <!-- WhatsApp Logo (SVG Path) -->
+      <path d="M16 10c-3.3 0-6 2.7-6 6 0 1.3.4 2.5 1 3.5l-1.5 5.5 5.6-1.5c1 .6 2.2 1 3.4 1 3.3 0 6-2.7 6-6s-2.7-6-6-6zm0 10.5c-.6 0-1.2-.1-1.7-.3l-.4-.2-2 .5.5-1.9-.2-.4c-.2-.5-.3-1.1-.3-1.7 0-2.3 1.9-4.2 4.2-4.2.6 0 1.2.1 1.8.4 1.1.5 1.9 1.5 2.3 2.6.2.6.3 1.2.3 1.8-.1 2.4-2 4.2-4.3 4.2zm2.3-3.1l-2.1-.6c-.1 0-.2-.1-.3 0l-.4.4c-.1.1-.1.2 0 .3l.7.7c.1.1.2.1.3 0l.4-.4c.1-.1.1-.2 0-.3l-.5-.5zm-2.1-1.1l-.5.5c-.1.1-.1.2 0 .3l1.5 1.5c.1.1.2.1.3 0l.5-.5c.1-.1.1-.2 0-.3l-1.5-1.5c-.1-.1-.2-.1-.3 0z" fill="#fff" transform="scale(0.8) translate(5, 5)"/>
+      
+      <!-- Animation (Pulse Effect) -->
+      <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+    </g>
+  </a>
+  
+  <!-- Footer Text -->
+  <text x="50%" y="85%" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">
+    Click the icon to join the group!
+  </text>
+</svg>
 
 ## deploy using termux (android and os) free 
 _
