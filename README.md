@@ -14,7 +14,10 @@
 ![Last Update](https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&label=Updated%20on)
 
 ---
-
+### 🔥 Popular Repositories  
+<a href="https://github.com/iconic05/Ossene-Rune-al-Beta">  
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=iconic05&repo=Ossene-Rune-al-Beta&show_icons=true&theme=radical" alt="Ossene-Rune-al-Beta">  
+</a>  
 ## 👋 **Welcome, User!**  
 💬 **Hello there!** Thanks for visiting **Queen Ruva AI Beta**. Feel free to explore, fork, and deploy! 🚀  
 
