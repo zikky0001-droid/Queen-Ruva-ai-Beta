@@ -22,7 +22,8 @@
 <div align="center">
   <sup>🔄 Real-time version tracking | 🛡️ Production-grade monitoring | 📈 Performance optimized</sup>
 </div>
-```
+
+---
 ## ✨ What's New
 • Chatbot  
 • Chataudio  
@@ -33,6 +34,7 @@
   - Instagram  
   - TikTok  
 
+---
 ## 👤 **Owner:** <span style="color: #1E90FF;">Iconic Tech</span>  
 
 ---
