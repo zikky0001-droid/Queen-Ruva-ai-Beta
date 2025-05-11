@@ -10,8 +10,18 @@
 
 ---
 
-## 🕒 Last Bot Update:  
-![Last Update](https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&label=Updated%20on)
+# 🚀 PROJECT ACTIVITY MONITOR
+
+## ⏰ DEPLOYMENT STATUS  
+<p align="center">
+  <a href="https://github.com/iconic05/Queen-ruva-ai-beta/commits/main">
+    <img src="https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&logo=vercel&logoColor=white&color=5865F2&label=LAST%20DEPLOYMENT&labelColor=121217&cacheSeconds=3600" alt="Deployment Status">
+  </a>
+</p>
+
+<div align="center">
+  <sup>🔄 Real-time version tracking | 🛡️ Production-grade monitoring | 📈 Performance optimized</sup>
+</div>
 ## ✨ What's New
 • Chatbot  
 • Chataudio  
