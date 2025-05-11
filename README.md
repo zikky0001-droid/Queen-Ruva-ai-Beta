@@ -12,10 +12,10 @@
 
 # 🚀 PROJECT ACTIVITY MONITOR
 
-## ⏰ DEPLOYMENT STATUS  
+## ⏰ HELP STATUS  
 <p align="center">
   <a href="https://github.com/iconic05/Queen-ruva-ai-beta/commits/main">
-    <img src="https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&logo=vercel&logoColor=white&color=5865F2&label=LAST%20DEPLOYMENT&labelColor=121217&cacheSeconds=3600" alt="Deployment Status">
+    <img src="https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&logo=vercel&logoColor=white&color=5865F2&label=LAST%20UPDATE&labelColor=121217&cacheSeconds=3600" alt="Deployment Status">
   </a>
 </p>
 
