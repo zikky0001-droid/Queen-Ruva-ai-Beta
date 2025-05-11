@@ -12,12 +12,15 @@
 
 ## 🕒 Last Bot Update:  
 ![Last Update](https://img.shields.io/github/last-commit/iconic05/Queen-ruva-ai-beta?style=for-the-badge&label=Updated%20on)
-
----  
-## 👋 **Welcome, User!**  
-💬 **Hello there!** Thanks for visiting **Queen Ruva AI Beta**. Feel free to explore, fork, and deploy! 🚀  
-
----
+## ✨ What's New
+• Chatbot  
+• Chataudio  
+• Text logos maker  
+• Music downloader  
+• URL downloaders including:  
+  - YouTube  
+  - Instagram  
+  - TikTok  
 
 ## 👤 **Owner:** <span style="color: #1E90FF;">Iconic Tech</span>  
 
