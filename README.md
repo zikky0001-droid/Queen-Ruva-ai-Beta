@@ -22,6 +22,7 @@
 <div align="center">
   <sup>🔄 Real-time version tracking | 🛡️ Production-grade monitoring | 📈 Performance optimized</sup>
 </div>
+```
 ## ✨ What's New
 • Chatbot  
 • Chataudio  
