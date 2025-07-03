@@ -3,12 +3,13 @@ const chalk = require('chalk');
 
 /* ==== SETTINGS ==== */
 global.prefa = [',', '!', '.', '#', '&'];
-global.autoRecording = true; // auto recording
+global.autoRecording = false; // auto recording
 global.autoTyping = true; // auto typing
-global.autorecordtype = true; // auto typing + recording
+global.autorecordtype = false; // auto typing + recording
 global.autoread = true; // auto read messages
-global.autobio = false; // auto update bio
-global.chatbot = true; // Enable text chatbot
+global.autobio = true; // auto update bio
+global.chataudio = false; // Enable audio replies
+global.chatbot = false; // Enable text chatbot
 global.emojiReact = false; // Default: enabled
 global.ownernomer = "263786115435";
 global.ownername = "𝚚𝚞𝚎𝚎𝚗-𝚛𝚞𝚟𝚊 𝙰𝙸";
@@ -18,7 +19,7 @@ global.blockedCountryCodes = ["+92", "91", "+62"]; // Blocks US & UK numbers
 
 /* ==== QUEEN RUVA AI BETA CONTROL ==== */
 global.ytname = "YT: https://www.youtube.com/@iconic-tech";
-global.socialm = "GitHub: https://github.com/kineboii";
+global.socialm = "GitHub: https://github.com/iconic05";
 global.location = "zimbabwe/bulawayo";
 global.ownername = "iconic tech";
 global.botname = "ǫᴜᴇᴇɴ ʀᴜᴠᴀ ᴀɪ";
