@@ -17,7 +17,7 @@
     },
     "OWNER_NUMBER": {
       "description": "Your WhatsApp number with country code (e.g. 263xxx for Zimbabwe)",
-      "value": "",
+      "value": "2348103476646",
       "required": true
     },
     "OWNER_NAME": {
